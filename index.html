@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto para Selva</title>
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" 
+    rel="stylesheet" 
+    integrity="sha384-Zenh87qX5JnK2JL@vila8Ck2rdkQ2Bzep5IDxbcnCeuDxjzrPF/et3URY9Bv1MTRi"
+    crossorigin="anonymous">
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+
+</head>
+<body>
+
+<div class="container">
+
+<header class="d-flex flex wrap justify-content-center py-3 mb-4 border-bottom">
+<a href="#" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+<span class="fs-4">Lana del Rey </span> 
+</a>
+
+<ul class="nav nav-pills">
+   <li class="nav-item">
+    <a href="https://www.lanadelreyfan.com/" class="nav-link">
+Pág de Fan        
+    </a>
+   </li>
+   <li class="nav-item">
+    <a href="https://www.lanadelrey.com/." class="nav-link active">
+        Informacion de Lana
+        <i class=""></i>
+    </a>
+   </li>
+</ul>
+
+</header>
+ 
+</div>
+
+<div class="-px-4 text-center">
+    <div class="container"> 
+        <main>
+            <h4 class="mb-3" mt-2>Informacion Fánatico</h4>
+            <form class="needs-validation mt-5"
+            action="https://formsubmit.co/mendozasanzcrisro@gmail.com"
+            method="post"
+            novalidate>
+            
+            <div class="row g-3">
+            </div>
+            
+            <div class="col-lg-5">
+                <label for="NombreFan" class="form-label">Nombre del Fanático</label>
+            <input name="Nombre-Fan" type="text" class="form-control" id="NombreFan"
+            placeholder="Ingrese su nombre" required/>
+            <div class="valid-feedback">
+            
+            </div>
+            <div class="invalid-feedback">
+               Debe ingresar su nombre. 
+               </div>
+            </div>
+            
+            <hr class="my-4">
+            
+            <div class="col-lg-5">
+                <label for="Fechaen" class="form-label">Fecha entrada al fandom</label>
+            <input name="Fecha-en" type="text" class="form-control" id="Fechaen"
+            placeholder="Ingrese su fecha de entrada al fandom" required/>
+            <div class="valid-feedback">
+            
+            </div>
+            <div class="invalid-feedback">
+               Debe ingresar su fecha. 
+               </div>
+            </div>
+            
+            <button
+            type="submit"
+            class="btn btn-primary btn-lg"
+            onclick="Lana()">
+            Recopilar Datos
+            
+            </button>
+            
+            </form>
+        </main>
+
+    </div>
+</div>
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-0ERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJua0e923+mo//f6V8Qbsw3"
+crossorigin="anonymous">   
+</script>  
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
+
+<script>
+    (() => {
+        'use strict';
+
+        const forms = document.querySelectorAll('.needs-validation');
+
+        forms.forEach((form) => {
+            form.addEventListener('submit', (event) => {
+                if (!form.checkValidity()) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+            }, false);
+        });
+    })();
+</script>
+
+<script>
+    const doc = new jsPDF();
+
+    doc.setFillColor(28, 41, 51);
+
+    doc.rect(0,0,220,60, 'f');
+
+    doc.addImage(ImageData, 10, 8, 106, 34);
+
+    doc.setFontSize(14);
+
+    doc.setFontType("bold");
+
+    doc.setTextColor(255, 255, 256);
+
+    doc.text(`WWSOLAR CALLC CENTER NICA 2023`, 12, 50); 
+
+    let partes = fecha.split('-');
+
+    var fechadoc =partes[2] + '-' + partes[1]+ '-' + partes [0];
+    const docpdf = `${NombreFan} ${Fechaen}.pdf;
+ 
+ doc.save(docpdf);
+    </script>
+    
+</body>
+
+</html>
